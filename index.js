@@ -14,8 +14,8 @@ const HOST = process.env.HOST || '0.0.0.0';
 require('./routes')(app);
 
 const connection = mysql.createConnection({
-	host: process.env.MYSQL_HOST || 'lb-reviews-sql',
-	port: '6032',
+	host: process.env.MYSQL_HOST || 'reviews-db',
+	port: '3306',
 	user: process.env.MYSQL_USER || 'root',
 	password: process.env.MYSQL_PASSWORD || 'reviewPassword',
 	database: process.env.MYSQL_DATABASE || 'review_suggestions'
