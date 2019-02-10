@@ -1,16 +1,16 @@
 const mysql = require('mysql');
 const connectionW = mysql.createConnection({
-    host: process.env.MYSQL_HOST || 'reviews-db',
+    host: process.env.MYSQL_HOST || 'lb-reviews-sql',
     user: process.env.MYSQL_USER || 'root',
-    port: '3306',
+    port: '6031',
     password: process.env.MYSQL_PASSWORD || 'reviewPassword',
     database: process.env.MYSQL_DATABASE || 'review_suggestions'
 });
 
 const connectionR = mysql.createConnection({
-    host: process.env.MYSQL_HOST || 'reviews-db',
+    host: process.env.MYSQL_HOST || 'lb-reviews-sql',
     user: process.env.MYSQL_USER || 'root',
-    port: '3306',
+    port: '6032',
     password: process.env.MYSQL_PASSWORD || 'reviewPassword',
     database: process.env.MYSQL_DATABASE || 'review_suggestions'
 });
