@@ -1,7 +1,7 @@
 const mysql = require('mysql');
 const connection = mysql.createConnection({
-    host: process.env.MYSQL_HOST || 'reviews-db',
-    user: process.env.MYSQL_USER || 'root',
+    host: process.env.MYSQL_HOST || 'lb-reviews-sql',
+    port: "6032",
     password: process.env.MYSQL_PASSWORD || 'reviewPassword',
     database: process.env.MYSQL_DATABASE || 'review_suggestions'
 });
